@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SyncDiff: Synchronized Motion Diffusion for Multi-Body Human-Object Interaction Synthesis</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
+  <link rel="icon" href="https://twemoji.maxcdn.com/v/latest/svg/1f32e.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><font color="orange">Sync</font><font color="blue">Diff</font>: <font color="orange">Sync</font>hronized Motion <font color="blue">Diff</font>usion for Multi-Body Human-Object Interaction Synthesis</h1>
+          <h3 class="title is-4">Anonymous Writers</h3>
+          <h3 class="title is-4">Paper ID 506</h3>
+          <h3 class="title is-4">CVPR 2025 submission</h3>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Teaser -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img id="teaser" src="./static/images/teaser.png">
+      <h2 class="subtitle has-text-centered">
+        <p><b><font color="orange">Sync</font><font color="blue">Diff</font> is a unified framework synthesizing <font color="red">synchronized</font> multi-body interaction motions with <font color="red">any number</font> of hands, humans, and rigid objects. The key innovations in <font color="orange">Sync</font><font color="blue">Diff</font> are two novel multi-body motion synchronization mechanisms, namely the <font color="red">alignment scores</font> and corresponding <font color="red">alignment loss function</font>, and <font color="red">explicit synchronization</font> strategy in inference. These mechanisms can help <font color="orange">Sync</font><font color="blue">Diff</font> synthesize realistic, coordinated, and physically plausible motions in various interaction scenarios.</p>
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="results">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <p><b>We will present qualitative results in the order of <font color="orange">TACO</font>, <font color="green">CORE4D</font>, <font color="purple">OAKINK2</font>, <font color="blue">GRAB</font>, and <font color="gray">Failure Cases</font>. The statistics are as follows:</h2>
+      <p><b><font color="orange">TACO</font>: 30 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 54 samples in total.</b></p>
+      <p><b><font color="green">CORE4D</font>: 28 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 52 samples in total.</b></p>
+      <p><b><font color="purple">OAKINK2</font>: 18 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 42 samples in total.</b></p>
+      <p><b><font color="blue">GRAB</font>: 4 samples with comparison to baselines (MACS, DiffH2O), 8 samples with two different synthesized interactions (Gallery). 12 samples in total.</b></p>
+      <p><b><font color="gray">Failure Cases</font>: 6 samples, 3 samples from <font color="green">CORE4D</font> and 3 samples from <font color="orange">TACO</font>, as is stated in Section F in the supplementary document.</b></p>
+    </div>
+  </div>
+</section>
+
+<!-- TACO -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="orange">TACO</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to MACS & DiffH2O(12 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/TACO/TACO_baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o decompose(6 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/TACO/TACO_dcac.mp4" type="video/mp4">
+            </video>
+            w/o decompose causes <font color="red">oversmooth</font> trajectories. Two objects often remain <font color="red">relatively stable</font>.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o exp sync & w/o align loss(12 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/TACO/TACO_expimp.mp4" type="video/mp4">
+            </video>
+            <p>w/o exp sync or w/o align loss lead to <font color="red">contact loss</font>, <font color="red">unsynchronization</font>, or <font color="red">abnormal shakings</font>.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="orange">Gallery(24 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/TACO/TACO_gallery.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- CORE4D -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="green">CORE4D</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to ComMDM & InterGen & OMOMO(12 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/CORE4D/CORE4D_baseline.mp4" type="video/mp4">
+            </video>
+            <p>Among the three methods, OMOMO, with its <font color="red">stagewise</font> diffusion, relatively ensures the hand-object alignment, but still falls short compared to our <font color="red">synchronization</font> strategies. These three methods often fail to complete tasks successfully because they lack the <font color="red">joint distribution and optimization</font> using <font color="red">a single diffusion model</font>. This might cause <font color="red">object trajectories</font> to be <font color="red">unadvantageous</font>, further leading to <font color="red">ineffective collaboration</font> for two humans.
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o decompose(6 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/CORE4D/CORE4D_dcac.mp4" type="video/mp4">
+            </video>
+            <p>w/o decompose induces <font color="red">unnatural walking poses</font>(e.g., sliding on ground), and sometimes <font color="red">unnatural joint rotations</font>. </h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/CORE4D/CORE4D_expimp.mp4" type="video/mp4">
+            </video>
+            <p><b><font color="red">Synchronization mechanisms</font> still play a significant role in <font color="red">human body-object</font> interaction synthesis.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync(6 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/CORE4D/CORE4D_exp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="green">Gallery(24 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/CORE4D/CORE4D_gallery.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- OAKINK2 -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="purple">OAKINK2</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to MACS & DiffH2O(8 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/OAKINK2/OAKINK2_baseline.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/OAKINK2/OAKINK2_expimp.mp4" type="video/mp4">
+            </video>
+            <p><b>OAKINK2 poses higher demand on <font color="red">fine control</font> of motions, which require the combination of our two <font color="red">synchronization mechanisms</font>.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync(6 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/OAKINK2/OAKINK2_exp.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="purple">Gallery(24 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/OAKINK2/OAKINK2_gallery.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- GRAB -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="blue">GRAB</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to MACS & DiffH2O(8 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/GRAB/GRAB_baseline.mp4" type="video/mp4">
+            </video>
+            <p><b><font color="red">Postgrasp setting</font>. GRAB has slightly lower requirements for synchronization. DiffH2O performs better than MACS, but it is outperformed by our method, particularly in scenarios involving <font color="red">small objects</font> or <font color="red">tricky grasping</font> areas.</h2>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/GRAB/GRAB_gallery.mp4" type="video/mp4">
+            </video>
+            <p><b>Here we need to synthesize <font color="red">complete motion sequences</font> rather than just post-grasp ones. We sample <font color="red">two different trajectories</font> using different initialization, to demonstrate the <font color="red">diversity</font> of our method.</h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="gray">Failure Cases</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="gray">Failure Cases from</font> <font color="green">CORE4D</font> <font color="gray">and</font> <font color="orange">TACO</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/FailureCases/failure.mp4" type="video/mp4">
+            </video>
+            <p><b>Samples in <font color="green">CORE4D</font> suffer from <font color="red">irrelevant bodies interference</font>, such as the interruption from a person that is about to join a task or has already completed the task and is about to leave. Samples from <font color="orange">TACO</font> suffer from <font color="red">unstable rotations</font>.</h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Data Capturing and Annotating -->
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces significant challenges in <font color="red">synchronizing motions</font> due to the <font color="red">high correlations</font> and <font color="red">mutual influences</font> among bodies. To address these challenges, we introduce <font color="orange">Sync</font><font color="blue">Diff</font>, a novel method for multi-body interaction synthesis using <font color="red">a synchronized motion diffusion</font> strategy. <font color="orange">Sync</font><font color="blue">Diff</font> employs <font color="red">a single diffusion model</font> to capture the joint distribution of multi-body motions. To enhance motion fidelity, we propose <font color="red">a frequency-domain motion decomposition</font> scheme. Additionally, we introduce a new set of <font color="red">alignment scores</font> to emphasize the synchronization of different body motions. <font color="orange">Sync</font><font color="blue">Diff</font> <font color="red">jointly optimizes</font> both <font color="red">data sample likelihood</font> and <font color="red">alignment likelihood</font> through an <font color="red">explicit synchronization</font> strategy. Extensive experiments across four datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Us -->
+
+<section class="section" id="Code">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Code</h2>
+    <p>The code will be made public after our paper gets accepted.</p>
+  </div>
+</section>
