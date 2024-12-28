@@ -57,6 +57,28 @@
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop content">
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content" style="text-align: center; font-size: 1.5em;">
+          <p><font color="black">
+            <span>Wenkun He<sup>1, 2</sup></span>  ,
+            <span>Yun Liu<sup>1, 2, 3</sup></span>  ,
+            <span>Ruitao Liu<sup>1</sup></span>  ,
+            <span>Li Yi<sup>†, 1, 2, 3</sup></span>
+          </font></p>
+          <p><font color="black" style="font-size: smaller;">
+            <sup>1</sup> Tsinghua University, 
+            <sup>2</sup> Shanghai Qi Zhi Institute,
+            <sup>3</sup> Shanghai Artificial Intelligence Laboratory
+          </font></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -65,6 +87,38 @@
       <h2 class="subtitle has-text-centered">
         <p><b><font color="orange">Sync</font><font color="blue">Diff</font> is a unified framework synthesizing <font color="red">synchronized</font> multi-body interaction motions with <font color="red">any number</font> of hands, humans, and rigid objects. The key innovations in <font color="orange">Sync</font><font color="blue">Diff</font> are two novel multi-body motion synchronization mechanisms, namely the <font color="red">alignment scores</font> and corresponding <font color="red">alignment loss function</font>, and <font color="red">explicit synchronization</font> strategy in inference. These mechanisms can help <font color="orange">Sync</font><font color="blue">Diff</font> synthesize realistic, coordinated, and physically plausible motions in various interaction scenarios.</p>
       </h2>
+    </div>
+  </div>
+</section>
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces significant challenges in <font color="red">synchronizing motions</font> due to the <font color="red">high correlations</font> and <font color="red">mutual influences</font> among bodies. To address these challenges, we introduce <font color="orange">Sync</font><font color="blue">Diff</font>, a novel method for multi-body interaction synthesis using <font color="red">a synchronized motion diffusion</font> strategy. <font color="orange">Sync</font><font color="blue">Diff</font> employs <font color="red">a single diffusion model</font> to capture the joint distribution of multi-body motions. To enhance motion fidelity, we propose <font color="red">a frequency-domain motion decomposition</font> scheme. Additionally, we introduce a new set of <font color="red">alignment scores</font> to emphasize the synchronization of different body motions. <font color="orange">Sync</font><font color="blue">Diff</font> <font color="red">jointly optimizes</font> both <font color="red">data sample likelihood</font> and <font color="red">alignment likelihood</font> through an <font color="red">explicit synchronization</font> strategy. Extensive experiments across four datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Demo -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Demo</h2>
+        <div class="content has-text-justified">
+          <div class="content">
+            <video id="demo" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/demo/demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -100,7 +154,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to MACS & DiffH2O(12 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to MACS & DiffH2O (12 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/TACO/TACO_baseline.mp4" type="video/mp4">
             </video>
@@ -110,7 +164,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o decompose(6 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o decompose (6 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/TACO/TACO_dcac.mp4" type="video/mp4">
             </video>
@@ -121,7 +175,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o exp sync & w/o align loss(12 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="orange">Comparison to w/o exp sync & w/o align loss (12 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/TACO/TACO_expimp.mp4" type="video/mp4">
             </video>
@@ -132,7 +186,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="orange">Gallery(24 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="orange">Gallery (24 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/TACO/TACO_gallery.mp4" type="video/mp4">
             </video>
@@ -150,7 +204,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Comparison to ComMDM & InterGen & OMOMO(12 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to ComMDM & InterGen & OMOMO (12 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_baseline.mp4" type="video/mp4">
             </video>
@@ -162,7 +216,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o decompose(6 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o decompose (6 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_dcac.mp4" type="video/mp4">
             </video>
@@ -173,7 +227,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync & w/o align loss (4 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_expimp.mp4" type="video/mp4">
             </video>
@@ -184,7 +238,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync(6 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to w/o exp sync (6 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_exp.mp4" type="video/mp4">
             </video>
@@ -194,7 +248,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Gallery(24 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Gallery (24 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_gallery.mp4" type="video/mp4">
             </video>
@@ -212,7 +266,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to MACS & DiffH2O(8 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to MACS & DiffH2O (8 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/OAKINK2/OAKINK2_baseline.mp4" type="video/mp4">
             </video>
@@ -222,7 +276,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync & w/o align loss (4 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/OAKINK2/OAKINK2_expimp.mp4" type="video/mp4">
             </video>
@@ -233,7 +287,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync(6 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="purple">Comparison to w/o exp sync (6 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/OAKINK2/OAKINK2_exp.mp4" type="video/mp4">
             </video>
@@ -243,7 +297,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="purple">Gallery(24 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="purple">Gallery (24 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/OAKINK2/OAKINK2_gallery.mp4" type="video/mp4">
             </video>
@@ -261,7 +315,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to MACS & DiffH2O(8 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to MACS & DiffH2O (8 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/GRAB/GRAB_baseline.mp4" type="video/mp4">
             </video>
@@ -272,7 +326,7 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to w/o exp sync & w/o align loss(4 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to w/o exp sync & w/o align loss (4 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/GRAB/GRAB_gallery.mp4" type="video/mp4">
             </video>
@@ -301,16 +355,14 @@
   </div>
 </section>
 
-<!-- Data Capturing and Annotating -->
-
-<!-- Abstract -->
+<!-- Code -->
 <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces significant challenges in <font color="red">synchronizing motions</font> due to the <font color="red">high correlations</font> and <font color="red">mutual influences</font> among bodies. To address these challenges, we introduce <font color="orange">Sync</font><font color="blue">Diff</font>, a novel method for multi-body interaction synthesis using <font color="red">a synchronized motion diffusion</font> strategy. <font color="orange">Sync</font><font color="blue">Diff</font> employs <font color="red">a single diffusion model</font> to capture the joint distribution of multi-body motions. To enhance motion fidelity, we propose <font color="red">a frequency-domain motion decomposition</font> scheme. Additionally, we introduce a new set of <font color="red">alignment scores</font> to emphasize the synchronization of different body motions. <font color="orange">Sync</font><font color="blue">Diff</font> <font color="red">jointly optimizes</font> both <font color="red">data sample likelihood</font> and <font color="red">alignment likelihood</font> through an <font color="red">explicit synchronization</font> strategy. Extensive experiments across four datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="black">Code & Data</font></h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <p><font color="black">Our code repository is at <a href="https://github.com/WenkunHe/SyncDiff" target="_blank" style="color: blue;">https://github.com/WenkunHe/SyncDiff</a>. Code will be released soon.</font></p>
         </div>
       </div>
     </div>
@@ -318,3 +370,16 @@
 </section>
 
 <!-- Contact Us -->
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3"><font color="black">Contact Us</font></h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="content">
+          <p><font color="black">You can contact Wenkun He via wenkunhe2003@hotmail.com.</font></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
