@@ -50,29 +50,10 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title"><font color="orange">Sync</font><font color="blue">Diff</font>: <font color="orange">Sync</font>hronized Motion <font color="blue">Diff</font>usion for Multi-Body Human-Object Interaction Synthesis</h1>
+          <h3 class="title is-4">Anonymous Writers</h3>
+          <h3 class="title is-4">Paper ID 2925</h3>
+          <h3 class="title is-4">ICCV 2025 submission</h3>
 
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop content">
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content" style="text-align: center; font-size: 1.5em;">
-          <p><font color="black">
-            <span>Wenkun He<sup>1, 2</sup></span>  ,
-            <span>Yun Liu<sup>1, 2, 3</sup></span>  ,
-            <span>Ruitao Liu<sup>1</sup></span>  ,
-            <span>Li Yi<sup>†, 1, 2, 3</sup></span>
-          </font></p>
-          <p><font color="black" style="font-size: smaller;">
-            <sup>1</sup> Tsinghua University, 
-            <sup>2</sup> Shanghai Qi Zhi Institute,
-            <sup>3</sup> Shanghai Artificial Intelligence Laboratory
-          </font></p>
         </div>
       </div>
     </div>
@@ -85,50 +66,8 @@
     <div class="hero-body">
       <img id="teaser" src="./static/images/teaser.png">
       <h2 class="subtitle has-text-centered">
-        <p><b><font color="orange">Sync</font><font color="blue">Diff</font> is a unified framework synthesizing <font color="red">synchronized</font> multi-body interaction motions with <font color="red">any number</font> of hands, humans, and rigid objects. The key innovations in <font color="orange">Sync</font><font color="blue">Diff</font> are two novel multi-body motion synchronization mechanisms, namely the <font color="red">alignment scores</font> and corresponding <font color="red">alignment loss function</font>, and <font color="red">explicit synchronization</font> strategy in inference. These mechanisms can help <font color="orange">Sync</font><font color="blue">Diff</font> synthesize realistic, coordinated, and physically plausible motions in various interaction scenarios.</p>
+        <p><b><font color="orange">Sync</font><font color="blue">Diff</font> is a unified framework synthesizing <font color="red">synchronized</font> multi-body interaction motions with <font color="red">any number</font> of hands, humans, and rigid objects. In <font color="orange">Sync</font><font color="blue">Diff</font>, we introduce two novel multi-body motion synchronization mechanisms, namely the <font color="red">alignment scores</font> for training and <font color="red">explicit synchronization</font> strategy in inference. With these mechanisms, the synthesized results can effectively prevent interpenetration, contact loss, or asynchronous human-object interactions in various scenarios, as shown in the above figure.</p>
       </h2>
-    </div>
-  </div>
-</section>
-
-<!-- Abstract -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces significant challenges in <font color="red">synchronizing motions</font> due to the <font color="red">high correlations</font> and <font color="red">mutual influences</font> among bodies. To address these challenges, we introduce <font color="orange">Sync</font><font color="blue">Diff</font>, a novel method for multi-body interaction synthesis using <font color="red">a synchronized motion diffusion</font> strategy. <font color="orange">Sync</font><font color="blue">Diff</font> employs <font color="red">a single diffusion model</font> to capture the joint distribution of multi-body motions. To enhance motion fidelity, we propose <font color="red">a frequency-domain motion decomposition</font> scheme. Additionally, we introduce a new set of <font color="red">alignment scores</font> to emphasize the synchronization of different body motions. <font color="orange">Sync</font><font color="blue">Diff</font> <font color="red">jointly optimizes</font> both <font color="red">data sample likelihood</font> and <font color="red">alignment likelihood</font> through an <font color="red">explicit synchronization</font> strategy. Extensive experiments across four datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Demo -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Demo</h2>
-        <div class="content has-text-justified">
-          <div class="content">
-            <video id="demo" autoplay controls muted loop playsinline height="100%">
-              <source src="./static/videos/demo/demo.mp4" type="video/mp4">
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Visual Results</h2>
-      </div>
     </div>
   </div>
 </section>
@@ -136,12 +75,12 @@
 <section class="results">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <p><b>We will present qualitative results in the order of <font color="orange">TACO</font>, <font color="green">CORE4D</font>, <font color="purple">OAKINK2</font>, <font color="blue">GRAB</font>, and <font color="gray">Failure Cases</font>. The statistics are as follows:</h2>
-      <p><b><font color="orange">TACO</font>: 30 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 54 samples in total.</b></p>
-      <p><b><font color="green">CORE4D</font>: 28 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 52 samples in total.</b></p>
-      <p><b><font color="purple">OAKINK2</font>: 18 samples with comparison to baselines or ablation study results, 24 single samples of our method (Gallery). 42 samples in total.</b></p>
-      <p><b><font color="blue">GRAB</font>: 4 samples with comparison to baselines (MACS, DiffH2O), 8 samples with two different synthesized interactions (Gallery). 12 samples in total.</b></p>
-      <p><b><font color="gray">Failure Cases</font>: 6 samples, 3 samples from <font color="green">CORE4D</font> and 3 samples from <font color="orange">TACO</font>, as is stated in Section F in the supplementary document.</b></p>
+      <p><b>We will present qualitative results in the order of <font color="orange">TACO</font>, <font color="green">CORE4D</font>, <font color="purple">OAKINK2</font>, <font color="blue">GRAB</font>, and <font color="pink">BEHAVE</font>. The statistics are as follows:</h2>
+      <p><b><font color="orange">TACO</font>: 30 samples with comparison to baselines (MACS, DiffH2O) or ablation study results, 24 single samples of our method (Gallery). 54 samples in total.</b></p>
+      <p><b><font color="green">CORE4D</font>: 28 samples with comparison to baselines (OMOMO, CG-HOI) or ablation study results, 24 single samples of our method (Gallery). 52 samples in total.</b></p>
+      <p><b><font color="purple">OAKINK2</font>: 18 samples with comparison to baselines (MACS, DiffH2O) or ablation study results, 24 single samples of our method (Gallery). 42 samples in total.</b></p>
+      <p><b><font color="blue">GRAB</font>: 8 samples with comparison to baselines (MACS, DiffH2O), 4 samples with two different synthesized interactions (Gallery). 12 samples in total.</b></p>
+      <p><b><font color="pink">BEHAVE</font>: 12 samples with comparison to baselines (OMOMO, CG-HOI).</b></p>
     </div>
   </div>
 </section>
@@ -168,7 +107,7 @@
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/TACO/TACO_dcac.mp4" type="video/mp4">
             </video>
-            w/o decompose causes <font color="red">oversmooth</font> trajectories. Two objects often remain <font color="red">relatively stable</font>.</h2>
+            w/o decompose causes <font color="red">oversmooth</font> trajectories. Two objects often remain <font color="red">relatively stable</font>. This is because those high-frequency compoenents <font color="red">with semantics</font> need to be separately represented, in order to avoid being overshadowed by large-scale movements.</h2>
           </div>
         </div>
       </div>
@@ -204,11 +143,11 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="green">Comparison to ComMDM & InterGen & OMOMO (12 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="green">Comparison to OMOMO & CG-HOI (12 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_baseline.mp4" type="video/mp4">
             </video>
-            <p>Among the three methods, OMOMO, with its <font color="red">stagewise</font> diffusion, relatively ensures the hand-object alignment, but still falls short compared to our <font color="red">synchronization</font> strategies. These three methods often fail to complete tasks successfully because they lack the <font color="red">joint distribution and optimization</font> using <font color="red">a single diffusion model</font>. This might cause <font color="red">object trajectories</font> to be <font color="red">unadvantageous</font>, further leading to <font color="red">ineffective collaboration</font> for two humans.
+            <p>Among the two baseline methods, OMOMO with its <font color="red">stagewise</font> diffusion, and CG-HOI with <font color="red">cross-attention between bodies and contact maps</font>, relatively ensures the hand-object alignment. But they still fall short compared to our <font color="red">synchronization</font> strategies, especially when the <font color="red">timing of cooperation</font> between two individuals needs to be perfectly orchestrated. This is because the two baseline methods lack the <font color="red">joint optimization</font> within <font color="red">a single diffusion model in both training and inference time</font>. This might cause <font color="red">object trajectories</font> to be <font color="red">unadvantageous</font>, further leading to <font color="red">ineffective collaboration</font> for two humans.
             </h2>
           </div>
         </div>
@@ -220,7 +159,7 @@
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/CORE4D/CORE4D_dcac.mp4" type="video/mp4">
             </video>
-            <p>w/o decompose induces <font color="red">unnatural walking poses</font>(e.g., sliding on ground), and sometimes <font color="red">unnatural joint rotations</font>. </h2>
+            <p>w/o decompose induces <font color="red">unnatural walking poses</font> (e.g., sliding on ground), and sometimes <font color="red">unnatural joint rotations</font>. </h2>
           </div>
         </div>
       </div>
@@ -280,7 +219,7 @@
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/OAKINK2/OAKINK2_expimp.mp4" type="video/mp4">
             </video>
-            <p><b>OAKINK2 poses higher demand on <font color="red">fine control</font> of motions, which require the combination of our two <font color="red">synchronization mechanisms</font>.</h2>
+            <p><b>OAKINK2 poses higher demand on <font color="red">fine-grained control</font> of motions, which require the combination of our two <font color="red">synchronization mechanisms</font>.</h2>
           </div>
         </div>
       </div>
@@ -326,25 +265,47 @@
       <div class="columns is-centered">
         <div class="column">
           <div class="content">
-            <h3 class="title" style="text-align: center;"><font color="blue">Comparison to w/o exp sync & w/o align loss (4 Samples)</font></h3>
+            <h3 class="title" style="text-align: center;"><font color="blue">Multiple Synthesized Results with One Condition (4 Samples)</font></h3>
             <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
               <source src="./static/videos/GRAB/GRAB_gallery.mp4" type="video/mp4">
             </video>
-            <p><b>Here we need to synthesize <font color="red">complete motion sequences</font> rather than just post-grasp ones. We sample <font color="red">two different trajectories</font> using different initialization, to demonstrate the <font color="red">diversity</font> of our method.</h2>
+            <p><b>Here <font color="orange">Sync</font><font color="blue">Diff</font> needs to synthesize <font color="red">complete motion sequences</font> rather than just post-grasp ones. We sample <font color="red">two different trajectories</font> using different initialization, to demonstrate the <font color="red">diversity</font> of our method.</h2>
           </div>
         </div>
       </div>
   </div>
 </section>
 
-<!-- Code -->
+<!-- BEHAVE -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="black">Code & Data</font></h2>
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <p><font color="black">Our code repository is at <a href="https://github.com/WenkunHe/SyncDiff" target="_blank" style="color: blue;">https://github.com/WenkunHe/SyncDiff</a>. Code will be released soon.</font></p>
+    <h2 class="title is-3"><font color="pink">BEHAVE</font></h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <h3 class="title" style="text-align: center;"><font color="pink">Comparison to OMOMO & CG-HOI (12 Samples)</font></h3>
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/BEHAVE/BEHAVE_baseline.mp4" type="video/mp4">
+            </video>
+            <p>In general, due to the relatively <font color="red">simple setting of one-human-one-object</font>, and the limited motion semantics (where the samples mostly consist of basic actions such as picking up, putting down, lateral/rotational movement), the disparity between our method and the baselines is not as pronounced as it is in the other four datasets. In the samples above, the advantages of our method are mostly manifested in <font color="red">more extensive motion completion</font>, <font color="red">fewer interpenetration and contact loss</font>, and <font color="red">more harmonious human postures</font>.
+            </h2>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+<!-- Data Capturing and Annotating -->
+
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces two significant challenges due to the high correlations and mutual influences among bodies, to which we propose corresponding solutions. First, to satisfy the high demands for <font color="red">synchronization</font> of different body motions, we mathematically derive a new set of <font color="red">alignment scores</font> during the training process, and use <font color="red">maximum likelihood sampling</font> on a <font color="red">dynamic graphical model</font> for <font color="red">explicit synchronization</font> during inference. Second, the <font color="red">high-frequency interactions</font> between objects are often overshadowed by the large-scale low-frequency movements. To address this, we introduce <font color="red">frequency decomposition</font> and explicitly represent high-frequency components in the frequency domain. Extensive experiments across five datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
         </div>
       </div>
     </div>
@@ -353,16 +314,9 @@
 
 <!-- Contact Us -->
 
-<section class="section">
+<section class="section" id="Code">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="black">Contact Us</font></h2>
-    <div class="columns is-centered">
-      <div class="column">
-        <div class="content">
-          <p><font color="black">Wenkun He: wenkunhe2003@hotmail.com</font></p>
-          <p><font color="black">Li Yi: ericyi0124@gmail.com</font></p>
-        </div>
-      </div>
-    </div>
+    <h2 class="title">Code</h2>
+    <p>The code will be made public after our paper gets accepted.</p>
   </div>
 </section>
