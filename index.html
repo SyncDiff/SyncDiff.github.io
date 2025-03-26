@@ -59,6 +59,24 @@
   </div>
 </section>
 
+<!-- Demo -->
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title is-3" style="text-align: center;">SyncDiff Demo</h2>
+      <h4 class="title is-3"></h4>
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="content">
+            <video id="brush_shapes" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/demo/demo.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+
+
 <!-- Teaser -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
@@ -71,8 +89,23 @@
   </div>
 </section>
 
+<!-- Abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" style="text-align: center;">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces two significant challenges due to the high correlations and mutual influences among bodies, to which we propose corresponding solutions. First, to satisfy the high demands for <font color="red">synchronization</font> of different body motions, we mathematically derive a new set of <font color="red">alignment scores</font> during the training process, and use <font color="red">maximum likelihood sampling</font> on a <font color="red">dynamic graphical model</font> for <font color="red">explicit synchronization</font> during inference. Second, the <font color="red">high-frequency interactions</font> between objects are often overshadowed by the large-scale low-frequency movements. To address this, we introduce <font color="red">frequency decomposition</font> and explicitly represent high-frequency components in the frequency domain. Extensive experiments across five datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="results">
   <div class="container is-max-desktop">
+    <h2 class="title is-3" style="text-align: center;">Visual Results</h2>
     <div class="hero-body">
       <p><b>We will present qualitative results in the order of <font color="orange">TACO</font>, <font color="green">CORE4D</font>, <font color="purple">OAKINK2</font>, <font color="blue">GRAB</font>, and <font color="pink">BEHAVE</font>. The statistics are as follows:</h2>
       <p><b><font color="orange">TACO</font>: 30 samples with comparison to baselines (MACS, DiffH2O) or ablation study results, 24 single samples of our method (Gallery). 54 samples in total.</b></p>
@@ -87,7 +120,7 @@
 <!-- TACO -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="orange">TACO</font></h2>
+    <h2 class="title is-3" style="text-align: center;"><font color="orange">TACO</font></h2>
       <h4 class="title is-3"></h4>
       <div class="columns is-centered">
         <div class="column">
@@ -137,7 +170,7 @@
 <!-- CORE4D -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="green">CORE4D</font></h2>
+    <h2 class="title is-3" style="text-align: center;"><font color="green">CORE4D</font></h2>
       <h4 class="title is-3"></h4>
       <div class="columns is-centered">
         <div class="column">
@@ -199,7 +232,7 @@
 <!-- OAKINK2 -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="purple">OAKINK2</font></h2>
+    <h2 class="title is-3" style="text-align: center;"><font color="purple">OAKINK2</font></h2>
       <h4 class="title is-3"></h4>
       <div class="columns is-centered">
         <div class="column">
@@ -248,7 +281,7 @@
 <!-- GRAB -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="blue">GRAB</font></h2>
+    <h2 class="title is-3" style="text-align: center;"><font color="blue">GRAB</font></h2>
       <h4 class="title is-3"></h4>
       <div class="columns is-centered">
         <div class="column">
@@ -278,7 +311,7 @@
 <!-- BEHAVE -->
 <section class="section">
   <div class="container is-max-desktop content">
-    <h2 class="title is-3"><font color="pink">BEHAVE</font></h2>
+    <h2 class="title is-3" style="text-align: center;"><font color="pink">BEHAVE</font></h2>
       <h4 class="title is-3"></h4>
       <div class="columns is-centered">
         <div class="column">
@@ -296,20 +329,6 @@
 </section>
 
 <!-- Data Capturing and Annotating -->
-
-<!-- Abstract -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>Synthesizing realistic human-object interaction motions is a critical problem in VR/AR and human animation. Unlike the commonly studied scenarios involving <font color="red">a single human or hand</font> interacting with <font color="red">one object</font>, we address a more <font color="red">generic</font> multi-body setting with <font color="red">arbitrary numbers of humans, hands, and objects</font>. This complexity introduces two significant challenges due to the high correlations and mutual influences among bodies, to which we propose corresponding solutions. First, to satisfy the high demands for <font color="red">synchronization</font> of different body motions, we mathematically derive a new set of <font color="red">alignment scores</font> during the training process, and use <font color="red">maximum likelihood sampling</font> on a <font color="red">dynamic graphical model</font> for <font color="red">explicit synchronization</font> during inference. Second, the <font color="red">high-frequency interactions</font> between objects are often overshadowed by the large-scale low-frequency movements. To address this, we introduce <font color="red">frequency decomposition</font> and explicitly represent high-frequency components in the frequency domain. Extensive experiments across five datasets with various multi-body configurations demonstrate the superiority of <font color="orange">Sync</font><font color="blue">Diff</font> over existing state-of-the-art motion synthesis methods.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Contact Us -->
 
